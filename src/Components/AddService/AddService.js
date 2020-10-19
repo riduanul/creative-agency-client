@@ -30,7 +30,7 @@ const AddService = () => {
   formData.append('title', serviceInfo.title)
   formData.append('description', serviceInfo.description)
 
-  fetch("http://localhost:5000/addService", {
+  fetch("https://thawing-cliffs-32104.herokuapp.com/addService", {
     method: 'POST',
     body: formData
   })

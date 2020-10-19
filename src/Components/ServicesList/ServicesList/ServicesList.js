@@ -8,7 +8,8 @@ import SideBarServices from '../SidebarServices/SideBarServices';
 
 
 const ServicesList = () => {
-    const [orderList, setOrderList] = useState([])
+    const [orderList, setOrderList] = useState([]);
+    const [status, setStatus] = useState({});
     const bgStyles ={
         backgroundColor: 'white',
         width: '100%', 
@@ -19,13 +20,19 @@ const ServicesList = () => {
     }
 
     useEffect( () => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://thawing-cliffs-32104.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => {
             console.log(data);
             setOrderList(data)
         })
     }, [])
+
+    const handlestatus = e => {
+            const status = e.target.value;
+            status[e.target.name] = e.target.value;
+            setStatus(status);
+    }
     return (
         <div>
             <NavServices></NavServices>
@@ -57,9 +64,9 @@ const ServicesList = () => {
                         <td>{orders.category}</td>
                         <td style={{width:'170px'}}>{orders.description}</td>
                         <select name="status" id="">
-                            <option style={{color:'red'}} value={orders.status}>Pending</option>
-                            <option style={{color:'yellow'}} value={orders.status}>On going</option>
-                            <option style={{color:'green'}}value={orders.status}>Done</option>
+                            <option onChange={handlestatus} style={{color:'red'}} value={orders.status}>Pending</option>
+                            <option onChange={handlestatus} style={{color:'yellow'}} value={orders.status}>On going</option>
+                            <option onChange={handlestatus} style={{color:'green'}}value={orders.status}>Done</option>
                         </select>
                     </tr>
                     )

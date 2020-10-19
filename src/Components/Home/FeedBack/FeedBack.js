@@ -37,7 +37,7 @@ const FeedBack = () => {
     const [reviewData, setReviewData] = useState([]);
 
     const handleFeedback = () => {
-        fetch('http://localhost:5000/addReviewsData',{
+        fetch('https://thawing-cliffs-32104.herokuapp.com/addReviewsData',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(feedbacks)
@@ -51,7 +51,7 @@ const FeedBack = () => {
     }
 
     useEffect(() => {
-       fetch("http://localhost:5000/reviews")
+       fetch("https://thawing-cliffs-32104.herokuapp.com/reviews")
         .then(res => res.json())
         .then (data => {
             console.log(data)

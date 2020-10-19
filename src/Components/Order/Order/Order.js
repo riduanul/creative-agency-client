@@ -15,20 +15,19 @@ const Order = () => {
   const [file, setFile] = useState(null);
 
   const handleBlur = (e) => {
-    e.preventDefault();
-    const newOrderInfo = { ...orderInfo };
+     const newOrderInfo = { ...orderInfo };
     newOrderInfo[e.target.name] = e.target.value;
     setOrderInfo(newOrderInfo);
   };
 
   const handleFileChange = (e) => {
-    e.preventDefault();
     const newFile = e.target.files[0];
     setFile(newFile);
   };
   console.log(loggedInUser);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     const formData = new FormData();
     formData.append("file", file);
     formData.append("name", loggedInUser.name);
@@ -37,7 +36,7 @@ const Order = () => {
     formData.append("category", loggedInUser.service.title);
     formData.append("description", loggedInUser.service.description);
 
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://thawing-cliffs-32104.herokuapp.com/addOrder", {
       method: "POST",
       body: formData,
     })

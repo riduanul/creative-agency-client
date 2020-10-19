@@ -10,7 +10,7 @@ const OrderDetails = () => {
     const [serviceData, setServiceData] = useState([]);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/service?email=${loggedInUser.email}`)
+      fetch(`https://thawing-cliffs-32104.herokuapp.com/service?email=${loggedInUser.email}`)
         .then((res) => res.json())
         .then((data) => {
             setServiceData(data);
