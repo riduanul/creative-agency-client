@@ -1,0 +1,12 @@
+.box-design{
+    width: 300px;
+    height: 240px;
+    border:1px solid transparent;
+    margin:10px;
+    padding:30px;
+    cursor:pointer;   
+}
+.box-design:hover {
+    
+    box-shadow: 3px 3px 15px lightgray;
+}

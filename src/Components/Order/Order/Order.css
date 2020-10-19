@@ -1,0 +1,11 @@
+.style-bar{
+    background-color: rgba(167, 157, 157, 0.082);
+    width: 100%;
+   
+}
+input, textarea{
+    width: 400px;
+    margin: 5px;
+    padding: 10px;
+    
+}

@@ -1,0 +1,26 @@
+.loginStyle {
+    width:500px;
+    height: 300px;
+    border: 1px solid black;
+    padding:80px;
+    margin: 50px auto;
+    text-align:center;
+}
+.loginStyle button{
+    width: 350px;
+    padding:10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color:white;
+    outline:none;
+}
+
+.btn-logo{
+    background-image: url(../../images/google.png);
+    background-size: 35px;
+    background-position: left center;
+    background-repeat:no-repeat;
+    padding: 10px;
+
+    
+}
