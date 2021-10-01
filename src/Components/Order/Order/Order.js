@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { UserContext } from "../../../App";
-import NavExtra from "../NavExtra/NavExtra";
 import SideBar from "../SideBar/SideBar";
 import "./Order.css";
 import { useForm } from "react-hook-form";
@@ -15,7 +14,7 @@ const Order = () => {
   const [file, setFile] = useState(null);
 
   const handleBlur = (e) => {
-     const newOrderInfo = { ...orderInfo };
+    const newOrderInfo = { ...orderInfo };
     newOrderInfo[e.target.name] = e.target.value;
     setOrderInfo(newOrderInfo);
   };
@@ -27,7 +26,7 @@ const Order = () => {
   console.log(loggedInUser);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const formData = new FormData();
     formData.append("file", file);
     formData.append("name", loggedInUser.name);
@@ -49,15 +48,32 @@ const Order = () => {
         console.error(error);
       });
   };
- 
+
   return (
-    <div>
-      <NavExtra></NavExtra>
-      <div className="container-fluid row">
-        <div className="col-md-2 pl-0">
-          <SideBar></SideBar>
+    <div className="container-fluid row">
+      <div className="col-md-2 pl-0">
+        <SideBar></SideBar>
+      </div>
+      <div className="col-md-9">
+        <div className="order-header">
+          <div>
+            <h4>Order</h4>
+          </div>
+          <div>
+            {loggedInUser && (
+              <div className="d-flex align-items-center ml-2">
+                <img
+                  style={{ width: "50px", borderRadius: "50%" }}
+                  src={loggedInUser.img}
+                  alt=""
+                />{" "}
+                <h6>{loggedInUser.name}</h6>
+              </div>
+            )}
+          </div>
         </div>
-        <div className="col-md-9 ml-5 pl-5 pt-5 pr-0 style-bar ">
+
+        <div className="order-main mt-3">
           <form onSubmit={handleSubmit}>
             <input
               type=" text"
@@ -78,14 +94,13 @@ const Order = () => {
             />
             <br />
             <input
-                  onBlur={handleBlur}
-                  type=" text"
-                  ref={register({ required: true })}
-                  name="category"
-                  placeholder="Your category"
-                  defaultValue={loggedInUser.service.title}
-                />
-                <br />
+              onBlur={handleBlur}
+              type=" text"
+              ref={register({ required: true })}
+              name="category"
+              placeholder="Your category"
+            />
+            <br />
             <textarea
               name="description"
               onBlur={handleBlur}
@@ -94,11 +109,10 @@ const Order = () => {
               cols="30"
               rows="5"
               placeholder="Project Details"
-              defaultValue={loggedInUser.service.description}
             ></textarea>
             <br />
             <input
-             onBlur={handleBlur}
+              onBlur={handleBlur}
               ref={register({ required: true })}
               style={{ width: "200px" }}
               type="number"

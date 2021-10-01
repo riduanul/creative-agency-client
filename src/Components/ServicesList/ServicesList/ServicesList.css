@@ -1,15 +1,4 @@
-.style-bar {
-  background-color: rgba(167, 157, 157, 0.082);
-  width: 100%;
-}
-input,
-textarea {
-  width: 400px;
-  margin: 5px;
-  padding: 10px;
-}
-
-.order-header {
+.serviceslist-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -17,9 +6,9 @@ textarea {
   height: 50px;
 }
 
-.order-main {
+.serviceslist-main {
   width: 100%;
-  height: 520px;
+  height: 450px;
   overflow: scroll;
   padding: 10px;
   /* line-height: 30px; */

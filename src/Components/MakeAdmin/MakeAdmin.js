@@ -1,51 +1,69 @@
 import React from "react";
-import NavServices from "../ServicesList/NavServices/NavServices";
-import SideBarServices from "../ServicesList/SidebarServices/SideBarServices";
+
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { UserContext } from "../../App";
-
+import "./MakeAdmin.css";
+import SideBar from "../Order/SideBar/SideBar";
 
 const MakeAdmin = () => {
-  const [ loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const { register, handleSubmit} = useForm();
-    
-    const onSubmit = data => {
-        fetch('https://thawing-cliffs-32104.herokuapp.com/admin',{
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
-        })
-        .then(res => res.json())
-        .then(result => {
-            alert('New Admin Added successfully')
-            console.log(result)
-        })            
-    }
-  const bgStyles = {
-    backgroundColor: "white",
-    width: "100%",
-    margin: "5px",
-    padding: "5px",
+  const [loggedInUser] = useContext(UserContext);
+  console.log(loggedInUser);
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    fetch("https://thawing-cliffs-32104.herokuapp.com/admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        alert("New Admin Added successfully");
+        console.log(result);
+      });
   };
+
   return (
     <div>
-      <NavServices></NavServices>
-      <div className="container-fluid row">
-        <div className="col-md-2 pl-0">
-          <SideBarServices></SideBarServices>
+      <div className=" row">
+        <div className="col-md-2 ">
+          <SideBar />
         </div>
-        <div className="col-md-9 ml-3 pl-3 pt-3 pr-3 style-bar ">
-          <div style={bgStyles} className="p-4 ">
-            <div className=" d-flex ">
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <label> Email</label>
-                <br />
-                <input ref={register({ required: true })} name='email' type="text" placeholder="jon@gmail.com" />
-                
-                <button className="btn btn-success btn-lg p-2 mb-2" >Submit</button>
-              </form>
+        <div className="col-md-8 ">
+          <div className="admin-header">
+            <div>
+              <h4>Make Admin</h4>
             </div>
+            <div>
+              {loggedInUser && (
+                <div className="d-flex align-items-center ml-2">
+                  <img
+                    style={{ width: "50px", borderRadius: "50%" }}
+                    src={loggedInUser.img}
+                    alt=""
+                  />{" "}
+                  <h6>{loggedInUser.name}</h6>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="  admin-main mt-3">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <label> Email</label>
+              <br />
+              <input
+                ref={register({ required: true })}
+                name="email"
+                type="text"
+                placeholder="jon@gmail.com"
+              />
+
+              <button className="btn btn-success btn-lg p-2 mb-2">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
