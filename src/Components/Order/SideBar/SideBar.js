@@ -36,67 +36,47 @@ const SideBar = () => {
           </Link>
         </div>
         <div>
-          {isAdmin ? (
-            <ul className="mt-5">
-              <Link to="/serviceslist">
+      
+            <ul className=" sidebar-li mt-5">
+              <Link to="/serviceslist" >
                 <li>
                   <FontAwesomeIcon icon={faShoppingBasket} />{" "}
-                  <span>Services list</span>{" "}
+                  <a href="/serviceslist">Services list</a>{" "}
                 </li>
               </Link>
               <Link to="/addservice">
                 <li>
                   {" "}
-                  <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>{" "}
+                  <FontAwesomeIcon icon={faPlus} /> <a href="/addservice">Add Service</a>{" "}
                 </li>
               </Link>
               <Link to="/makeadmin">
                 <li>
-                  <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>
+                  <FontAwesomeIcon icon={faUserPlus} /> <a href="/makeadmin">Make Admin</a>
                 </li>
               </Link>
 
               <Link to="/order">
                 <li>
-                  <FontAwesomeIcon icon={faShoppingCart} /> <span>Order</span>{" "}
+                  <FontAwesomeIcon icon={faShoppingCart} /> <a href="/order">Order</a>{" "}
                 </li>
               </Link>
               <Link to="/orderlist">
                 <li>
                   {" "}
                   <FontAwesomeIcon icon={faShoppingBasket} />{" "}
-                  <span>Order list</span>{" "}
+                  <a href="/orderlist">Order list</a>{" "}
                 </li>
               </Link>
               <Link to="/review">
                 <li>
-                  <FontAwesomeIcon icon={faCommentAlt} /> <span> Review</span>
+                  <FontAwesomeIcon icon={faCommentAlt} /> <a href="/review"> Review</a>
                 </li>
               </Link>
             </ul>
-          ) : (
-            <div className="mt-5">
-              <ul>
-                <Link to="/order">
-                  <li>
-                    <FontAwesomeIcon icon={faShoppingCart} /> <span>Order</span>{" "}
-                  </li>
-                </Link>
-                <Link to="/orderlist">
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon icon={faShoppingBasket} />{" "}
-                    <span>Order list</span>{" "}
-                  </li>
-                </Link>
-                <Link to="/review">
-                  <li>
-                    <FontAwesomeIcon icon={faCommentAlt} /> <span> Review</span>
-                  </li>
-                </Link>
-              </ul>
-            </div>
-          )}
+         
+            
+       
         </div>
       </div>
     </div>

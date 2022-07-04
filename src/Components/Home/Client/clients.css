@@ -1,0 +1,14 @@
+.clients{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .clients img {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .clients img {
+        width: 80%;
+    }
+}

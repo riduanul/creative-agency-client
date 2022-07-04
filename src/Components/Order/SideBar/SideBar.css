@@ -4,8 +4,21 @@
        
 }
 
-.ul, li{
-    list-style: none;
-    text-decoration: none;
-    line-height:40px;
+.sidebar-li li{
+ line-height: 40px;
+
 }
+
+
+
+a:-webkit-any-link{
+    text-decoration: none;
+    color:black;
+}
+
+a.active{
+    color:red;
+}
+
+
+

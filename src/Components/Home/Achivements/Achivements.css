@@ -1,0 +1,104 @@
+.achivements{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.achivement-card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.achivement-card{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(143, 180, 143, 0.664);
+    margin-bottom: 50px;   
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: .5rem .5rem .5rem gray;
+    cursor: pointer;
+    transition: all 4s;
+}
+.achivement-card p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(60, 52, 138)
+}
+.achivement-card h1{
+   
+    color: rgb(121, 37, 146);
+}
+.react-icon{
+    font-size: 3.5rem;
+    /* margin-Top: -50px; */
+    color:rgba(74, 57, 168, 0.877);
+}
+
+.achivement-card:hover{
+    transform:rotate(360deg);
+}
+
+
+@media screen and (max-width: 600px) {
+        .achivement-card-container{
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+        }
+
+        .achivement-card{
+           
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+        }
+        .achivement-card h1{
+            font-size: medium;
+        }
+}
+@media screen and (max-width: 768px) {
+        .achivement-card-container{
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .achivement-card{
+            width: 70%;
+            height: 120px;
+            padding: 5px;
+        }
+        .achivement-card:hover{
+            transform: scale(1.1);
+        }
+        .react-icon{
+            font-size: 1.9rem;
+        }
+        .achivement-card h1{
+            font-size: 1.3rem;
+        }
+        .achivement-card p{
+            font-size: 0.8rem;
+        }
+}
+
+
+@media screen and (max-width: 420px) {
+        .achivement-card-container{
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .achivement-card{
+            width: 80px;
+            height: 80px;
+            padding: 5px;
+        }
+        .achivement-card h1{
+            font-size: small;
+        }
+        .achivement-card p{
+            font-size: small;
+        }
+}

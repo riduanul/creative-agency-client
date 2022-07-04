@@ -1,0 +1,35 @@
+.about-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    padding: 20px;   
+}
+.about-img{
+    max-width: 100%;
+}
+.about-img img{
+    max-width: 90%;
+}
+
+
+.about-content{
+    max-width: 50%;
+    margin-top: 20px ;
+    text-align: justify;
+}
+
+.about-content a{
+    text-decoration: underline !important;
+    color:green !important;
+}
+
+@media screen and (max-width:600px) {
+    .about-container{
+        flex-direction: column;
+    }
+    .about-content{
+        text-align: center;
+    }
+}
+
+

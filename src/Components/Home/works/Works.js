@@ -10,7 +10,7 @@ import carousel5 from '../../../images/carousel-5.png'
 
 
 const breakPoints = [
-{width:1, itemsToShow:1},
+{width:100, itemsToShow:1},
 {width:550, itemsToShow:2},
 {width:768, itemsToShow:3},
 {width:1200, itemsToShow:4}

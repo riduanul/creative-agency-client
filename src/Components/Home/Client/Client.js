@@ -4,10 +4,11 @@ import google from '../../../images/logos/google.png'
 import uber from '../../../images/logos/uber.png'
 import netflix from '../../../images/logos/netflix.png'
 import airbnb from '../../../images/logos/airbnb.png'
-
+import './clients.css'
 const Client = () => {
     return (
-        <div className="container">
+        <div className="container clients">
+            <h3 style={{ marginTop:"25px", fontWeight:"700"}}>Our <span style={{color:'green'}}>Clients</span></h3>
             <div className="row d-flex  pl-5 mt-5 justify-content-around align-items-center">
                
                <div className="col-md-2">

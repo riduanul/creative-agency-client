@@ -2,11 +2,14 @@
     width: 300px;
     height: 240px;
     border:1px solid transparent;
+    border-radius: 15px;
     margin:10px;
     padding:30px;
-    cursor:pointer;   
+    cursor:pointer;
+    box-shadow: .3rem.3rem .5rem lightgray;
+    transition:all 3s;
 }
 .box-design:hover {
+    transform: scale(1.1);
     
-    box-shadow: 3px 3px 15px lightgray;
 }

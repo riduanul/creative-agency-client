@@ -6,7 +6,7 @@ import logo from "../../../images/logos/logo.png";
 import "./NavExtra.css";
 
 const NavExtra = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   return (
     <div className=" container row nav-style my-2">
       <div className=" pl-5 ml-2 d-flex justify-content-between">
