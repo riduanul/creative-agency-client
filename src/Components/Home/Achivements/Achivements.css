@@ -1,6 +1,6 @@
 .achivements{
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 .achivement-card-container{
     display: flex;
@@ -11,32 +11,34 @@
 .achivement-card{
     width: 200px;
     height: 200px;
-    background-color: rgba(143, 180, 143, 0.664);
+  
     margin-bottom: 50px;   
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     box-shadow: .5rem .5rem .5rem gray;
     cursor: pointer;
-    transition: all 4s;
+    transition: all 2s;
+    border:2px solid rgba(100, 96, 96, 0.404);
 }
 .achivement-card p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    color: rgb(60, 52, 138)
+    color: rgb(118, 117, 122)
 }
 .achivement-card h1{
-   
-    color: rgb(121, 37, 146);
+    padding-top: 5px;
+   font-size: 2.2rem;
+  font-weight: 600;
 }
 .react-icon{
     font-size: 3.5rem;
     /* margin-Top: -50px; */
-    color:rgba(74, 57, 168, 0.877);
+    color:rgba(102, 158, 38, 0.877);
 }
 
 .achivement-card:hover{
-    transform:rotate(360deg);
+    transform:scale(0.9);
 }
 
 
@@ -58,12 +60,15 @@
 }
 @media screen and (max-width: 768px) {
         .achivement-card-container{
-            /* flex-wrap: wrap; */
             justify-content: space-between;
             flex-direction: column;
         }
 
         .achivement-card{
+            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
             width: 70%;
             height: 120px;
             padding: 5px;
@@ -72,13 +77,13 @@
             transform: scale(1.1);
         }
         .react-icon{
-            font-size: 1.9rem;
+            font-size: 3.0rem;
         }
         .achivement-card h1{
-            font-size: 1.3rem;
+            font-size: 2.3rem;
         }
         .achivement-card p{
-            font-size: 0.8rem;
+            font-size: 1.0rem;
         }
 }
 

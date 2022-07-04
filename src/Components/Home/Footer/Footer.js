@@ -14,9 +14,9 @@ const Footer = () => {
                     <div className="item1">
                         <ul>
                             <li><h6>We are free to contact</h6></li>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div className="item1">
@@ -30,14 +30,14 @@ const Footer = () => {
                     <div className="item1">
                         <ul>
                         <li><h6>We are free to contact</h6></li>
-                            <li><a href="#">creativeAgency@gmail.com</a></li>
+                            <li><a href="mailto:creativeagency@gmail.com">creativeAgency@gmail.com</a></li>
                             <li>Phone: 01788888888</li>
                             <li> main Street, Banani, Dhaka-1200</li>
                         </ul>
                     </div>
             </div>
      
-            <div className='text-center mt-5'>  Copyrights {(new Date().getFullYear())} All rights reserved</div>
+            <div className='text-center mt-5'>  Copyrights &copy; {(new Date().getFullYear())} All rights reserved</div>
     
         </div>   
 
