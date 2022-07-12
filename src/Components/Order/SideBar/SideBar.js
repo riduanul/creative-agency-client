@@ -7,6 +7,8 @@ import {
   faCommentAlt,
   faPlus,
   faUserPlus,
+  faSignOutAlt
+  
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
@@ -15,7 +17,7 @@ import logo from "../../../images/logos/logo.png";
 const SideBar = () => {
   const [loggedInUser] = useContext(UserContext);
 
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isadmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     fetch("https://thawing-cliffs-32104.herokuapp.com/isAdmin", {
@@ -28,51 +30,70 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="sidebar">
       <div className="sideBar-style mt-3 ">
-        <div className=" pl-2 ml-2 mt-5 d-flex justify-content-between">
+        <div className="bar-img">
           <Link to="/">
             <img src={logo} alt="logo" width="150" />
           </Link>
         </div>
-        <div>
+    <div className=" sidebar-li mt-5">
       
-            <ul className=" sidebar-li mt-5">
+      <ul >
+            <li>
               <Link to="/serviceslist" >
-                <li>
+               
                   <FontAwesomeIcon icon={faShoppingBasket} />{" "}
-                  <a href="/serviceslist">Services list</a>{" "}
-                </li>
+                  Services list
+                
               </Link>
+              </li>
+              <li>
               <Link to="/addservice">
-                <li>
-                  {" "}
-                  <FontAwesomeIcon icon={faPlus} /> <a href="/addservice">Add Service</a>{" "}
-                </li>
+                
+                  <FontAwesomeIcon icon={faPlus} /> Add Service                
               </Link>
+              </li>
+              <li>
               <Link to="/makeadmin">
-                <li>
-                  <FontAwesomeIcon icon={faUserPlus} /> <a href="/makeadmin">Make Admin</a>
-                </li>
+                
+                  <FontAwesomeIcon icon={faUserPlus} /> Make Admin
+                
               </Link>
+              </li>
 
+              <li>
               <Link to="/order">
-                <li>
-                  <FontAwesomeIcon icon={faShoppingCart} /> <a href="/order">Order</a>{" "}
-                </li>
+                
+                  <FontAwesomeIcon icon={faShoppingCart} />Order
+               
               </Link>
+              </li>
+              
+              <li>
               <Link to="/orderlist">
-                <li>
-                  {" "}
-                  <FontAwesomeIcon icon={faShoppingBasket} />{" "}
-                  <a href="/orderlist">Order list</a>{" "}
-                </li>
+            
+                  <FontAwesomeIcon icon={faShoppingBasket} />
+                  Order list
+                
               </Link>
+              </li>
+
+              <li>
               <Link to="/review">
-                <li>
-                  <FontAwesomeIcon icon={faCommentAlt} /> <a href="/review"> Review</a>
-                </li>
+              
+                  <FontAwesomeIcon icon={faCommentAlt} /> Review
+                
               </Link>
+              </li>
+
+              <li style={{color:'red'}}>
+              <Link to="/" >
+               
+                  <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+                
+              </Link>
+              </li>
             </ul>
          
             

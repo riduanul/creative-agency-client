@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Order = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const { register } = useForm();
 
   const [orderInfo, setOrderInfo] = useState({});
@@ -27,13 +27,13 @@ const Order = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData();
+    let formData = new FormData();
     formData.append("file", file);
     formData.append("name", loggedInUser.name);
     formData.append("email", loggedInUser.email);
     formData.append("price", orderInfo.price);
-    formData.append("category", loggedInUser.service.title);
-    formData.append("description", loggedInUser.service.description);
+    formData.append("category", orderInfo.category);
+    formData.append("description", orderInfo.description);
 
     fetch("https://thawing-cliffs-32104.herokuapp.com/addOrder", {
       method: "POST",
@@ -41,12 +41,14 @@ const Order = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        
         alert("New Service Added Successfully");
+        
       })
       .catch((error) => {
         console.error(error);
       });
+      formData = '';
   };
 
   return (

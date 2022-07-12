@@ -41,16 +41,13 @@ const Login = () => {
  
 
   return (
-    <div className="container pt-5 ">
+    <div className=" pt-5 login-content">
       <div className="text-center">
         <Link to="/">
           <img src={logo} alt="" width="150" />
         </Link>
       </div>
-      <p className="text-center" style={{ color: "green", marginTop: "15px" }}>
-        Login as an admin with this email and password. Email:
-        creativeagency96@gmail.com Password: agency@1122
-      </p>
+      
 
       <div className="loginStyle">
         <h4>

@@ -35,7 +35,7 @@ const Achivements = () => {
         <div className="achivement-card">
             <MdApps className='react-icon'/>
             <div className="card-content">
-                <h1> <h1><CountUp end={25} duration={2} suffix='k+'/></h1></h1>
+                <h1><CountUp end={25} duration={2} suffix='k+'/></h1>
                 <p>Product Already supplied</p>
         </div>
         </div>

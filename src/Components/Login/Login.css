@@ -1,24 +1,64 @@
-.loginStyle {
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 80px;
-  margin: 50px auto;
-  text-align: center;
-}
-.loginStyle button {
-  width: 350px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 30px;
-  background-color: white;
-  outline: none;
-}
+.login-content{
+  margin-top: 80px;
+  
+   
+ }
+ .loginStyle {
+   max-width: 350px;
+   height: 200px;
+   border: 1px solid rgb(105, 101, 101);
+   padding: 40px;
+   margin: 50px auto;
+   text-align: center;
+ }
+ .loginStyle button {
+   width: 250px;
+   padding: 5px;
+   border: 1px solid rgb(121, 115, 115);
+   border-radius: 30px;
+   background-color: white;
+   outline: none;
+ }
 
-.btn-logo {
+
+ .btn-logo {
   background-image: url(../../images/google.png);
-  background-size: 35px;
+  background-size: 28px;
   background-position: left center;
   background-repeat: no-repeat;
   padding: 10px;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+  .loginStyle {
+    max-width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 80px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .loginStyle button {
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    outline: none;
+  }
+  
+  .loginStyle button:hover{
+    background-color: gray;
+  }
+  
+  .btn-logo {
+    background-image: url(../../images/google.png);
+    background-size: 35px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 10px;
+  }
 }

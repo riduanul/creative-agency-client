@@ -8,7 +8,7 @@ import SideBar from "../Order/SideBar/SideBar";
 
 const MakeAdmin = () => {
   const [loggedInUser] = useContext(UserContext);
-  console.log(loggedInUser);
+
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -33,7 +33,7 @@ const MakeAdmin = () => {
         <div className="col-md-8 ">
           <div className="admin-header">
             <div>
-              <h4>Make Admin</h4>
+              <h5>Make Admin</h5>
             </div>
             <div>
               {loggedInUser && (

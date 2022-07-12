@@ -1,7 +1,11 @@
+.serviceslist-header h1{
+  font-size: .5rem;
+}
+
 .serviceslist-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:space-between;
   margin-top: 40px;
   height: 50px;
 }

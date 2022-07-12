@@ -93,7 +93,7 @@ const AddService = () => {
                   <input
                     style={{ display: "none" }}
                     type="file"
-                    name="image"
+                    name="file"
                     id="file-input"
                     multiple
                     onChange={(e) =>

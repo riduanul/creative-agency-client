@@ -8,7 +8,7 @@ import SideBar from "../../Order/SideBar/SideBar";
 const ServicesList = () => {
   const [loggedInUser] = useContext(UserContext);
   const [orderList, setOrderList] = useState([]);
-  const [status, setStatus] = useState({});
+  const [selectedStatus, setSelectStatus] = useState({});
 
   useEffect(() => {
     fetch("https://thawing-cliffs-32104.herokuapp.com/orders")
@@ -21,8 +21,10 @@ const ServicesList = () => {
   const handlestatus = (e) => {
     const status = e.target.value;
     status[e.target.name] = e.target.value;
-    setStatus(status);
+    setSelectStatus(status);
   };
+
+  
   return (
     <div className="container-fluid row">
       <div className="col-md-2 pl-0">

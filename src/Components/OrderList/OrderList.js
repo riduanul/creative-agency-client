@@ -17,7 +17,13 @@ const OrderList = () => {
       .then((data) => {
         setOrderData(data);
       });
-  }, []);
+  }, [loggedInUser.email]);
+
+  useEffect(()=>{
+    fetch('https://thawing-cliffs-32104.herokuapp.com/isAdmin')
+    .then(res => res.json())
+    .then(data => console.log(data))
+  },[])
 
   return (
     <div>
@@ -38,7 +44,7 @@ const OrderList = () => {
                     style={{ width: "50px", borderRadius: "50%" }}
                     src={loggedInUser.img}
                     alt=""
-                  />{" "}
+                  />
                   <h6>{loggedInUser.name}</h6>
                 </div>
               )}

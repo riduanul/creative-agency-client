@@ -1,16 +1,38 @@
 .admin-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 40px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
   height: 50px;
+  padding: 20px;
 }
 
 .admin-main {
-  width: 100%;
-  height: 400px;
-  overflow: scroll;
-  padding: 10px;
-  /* line-height: 30px; */
-  border: 20px solid lightgray;
+  padding: 20px;
+  max-width: 100vw;
+  height: auto;
+   padding: 10px;
+   border: 2px solid lightgray;
+   margin: 2px;
+  
+}
+
+.admin-main input[type=text] {
+  width: 90%;
+}
+
+@media screen and (min-width:600px) {
+  .admin-header{
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+  .admin-main {
+    border: 20px solid lightgray;
+    height: 400px;
+  }
+  .admin-main input[type=text] {
+    width: 50%;
+  }
 }

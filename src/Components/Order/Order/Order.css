@@ -18,10 +18,21 @@ textarea {
 }
 
 .order-main {
-  width: 100%;
-  height: 520px;
-  overflow: scroll;
+  max-width: 100vw;
+  height: auto;
   padding: 10px;
-  /* line-height: 30px; */
-  border: 20px solid lightgray;
+  border: 2px solid lightgray;
+  
+}
+
+.order-main input[type=text]{
+  width: 50%;
+}
+
+@media screen and (min-width:600px) {
+  .order-main {
+    overflow: scroll;
+    border: 20px solid lightgray;
+    height: 520px;
+  }
 }

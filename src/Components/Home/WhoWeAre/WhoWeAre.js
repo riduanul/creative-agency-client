@@ -15,7 +15,7 @@ const WhoWeAre = () => {
         <p style={{marginTop:'25px'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae magnam soluta necessitatibus elig.</p>
         <p style={{marginTop:'25px'}}>Lorem ipsum dolor sit, amet qui eius explicabo facilis nostrum quas voluptatibus, ipsa placeat. Quae, magni dolore.</p>
 
-        <a href="">See More</a>
+        <a href="/home">See More</a>
       </div>
    </div>
   )
