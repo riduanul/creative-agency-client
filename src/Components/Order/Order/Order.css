@@ -2,12 +2,6 @@
   background-color: rgba(167, 157, 157, 0.082);
   width: 100%;
 }
-input,
-textarea {
-  width: 400px;
-  margin: 5px;
-  padding: 10px;
-}
 
 .order-header {
   display: flex;
@@ -25,8 +19,20 @@ textarea {
   
 }
 
-.order-main input[type=text]{
-  width: 50%;
+.order-main input{
+  width: 97%; 
+  padding:10px;
+  margin:5px;
+  outline: none;
+}
+
+.order-main textarea{
+  width: 97%;
+  resize: none;
+  outline: none;
+  max-width: 100%;
+  margin-left: 5px;
+
 }
 
 @media screen and (min-width:600px) {

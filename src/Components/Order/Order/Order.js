@@ -124,7 +124,7 @@ const Order = () => {
             />
             <input onChange={handleFileChange} type="file" name="file" id="" />
             <br />
-            <button type="submit" className="btn btn-dark mt-2 ml-1">
+            <button type="submit" className="btn btn-success mt-2 ml-1">
               Send
             </button>
           </form>

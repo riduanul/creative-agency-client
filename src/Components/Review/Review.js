@@ -3,6 +3,7 @@ import SideBar from "../Order/SideBar/SideBar";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { UserContext } from "../../App";
+import './review.css';
 
 const Review = () => {
   const [loggedInUser] = useContext(UserContext);
@@ -42,7 +43,7 @@ const Review = () => {
             )}
           </div>
         </div>
-        <div className="admin-main mt-3">
+        <div className="admin-main mt-3 review-section">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               type=" text"
@@ -67,7 +68,7 @@ const Review = () => {
               placeholder="Description"
             ></textarea>
             <br />
-            <button className="btn btn-dark mt-2 ml-1">Submit</button>
+            <button className="btn btn-success mt-2 ml-1">Submit</button>
           </form>
         </div>
       </div>

@@ -14,6 +14,7 @@ const MakeAdmin = () => {
   const onSubmit = (data) => {
     fetch("https://thawing-cliffs-32104.herokuapp.com/admin", {
       method: "POST",
+     
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
